@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="KVb-95-k33">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Ola-Uq-syf">
+            <objects>
+                <viewController id="KVb-95-k33" customClass="ViewController" customModule="PDFViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZKK-cq-tAU"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tvh-jG-ucM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xjb-l9-VRP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XKG-64-M02">
+                                <rect key="frame" x="20" y="28" width="280" height="532"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="XKG-64-M02" firstAttribute="top" secondItem="ZKK-cq-tAU" secondAttribute="bottom" constant="8" id="93X-dD-Ccf"/>
+                            <constraint firstItem="Tvh-jG-ucM" firstAttribute="top" secondItem="XKG-64-M02" secondAttribute="bottom" constant="8" id="g5f-yY-trS"/>
+                            <constraint firstItem="XKG-64-M02" firstAttribute="leading" secondItem="xjb-l9-VRP" secondAttribute="leadingMargin" id="p3g-Gj-EH2"/>
+                            <constraint firstItem="XKG-64-M02" firstAttribute="trailing" secondItem="xjb-l9-VRP" secondAttribute="trailingMargin" id="wNt-L8-n4E"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pdfWebView" destination="XKG-64-M02" id="zac-El-RVG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cQx-h2-OCz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="817" y="94"/>
+        </scene>
+    </scenes>
+</document>
